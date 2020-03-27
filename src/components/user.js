@@ -27,7 +27,7 @@ state={}
         let token=localStorage.getItem("token");
         let  base_URI = `http://localhost:5000/api/protected/user?token=${token}`
         try {
-            const response = await axios.delete(this.base_URI);
+            const response = await axios.delete(base_URI);
             console.log(response.data);
             this.setState(response.data)
         } catch (error) {
