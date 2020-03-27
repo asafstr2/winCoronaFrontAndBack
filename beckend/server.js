@@ -17,6 +17,7 @@ app.use(express.json());
 
 
 const uri= process.env.LOCAL_URI;
+console.log(uri)
 mongoose.connect(uri,{useNewUrlParser:true,useCreateIndex:true, useUnifiedTopology: true});
 
 const connection=mongoose.connection;
